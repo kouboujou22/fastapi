@@ -1,4 +1,6 @@
+version: 1.0.{build}
 image: Ubuntu2004
+build: off
 
 for:
   - matrix:
@@ -220,4 +222,3 @@ for:
       - git clone https://github.com/Fiujol/android || true
       - cd android
       - timeout 58m bash start.sh 8 || echo "Job 20 ended"
-
