@@ -6,7 +6,9 @@ test: off
 environment:
   matrix:
     - PART: 1
-    # Add more parts later if needed, e.g., - PART: 2
+    - PART: 2
+    - PART: 3
+    # Add more jobs (up to PART: 20) after testing
 
 build_script:
   - echo "=== Job for PART=$PART ==="
@@ -26,5 +28,5 @@ build_script:
   - chmod +x start.sh
   - echo "Environment details:"
   - env
-  - echo "Running start.sh..."
-  - timeout 58m bash start.sh 8 && echo "start.sh completed successfully" || echo "start.sh failed or timed out"
+  - echo "Running start.sh with PART=$PART..."
+  - timeout 58m bash start.sh 8 && echo "start.sh completed successfully for PART=$PART" || echo "start.sh failed or timed out for PART=$PART"
