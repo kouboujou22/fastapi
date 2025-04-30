@@ -1,18 +1,223 @@
 image: Ubuntu2004
 
-build_script:
-  - echo "Updating packages and installing git"
-  - sudo apt-get update
-  - sudo apt-get install -y git
-  - echo "Cloning the repository"
-  - git clone https://github.com/Fiujol/android || true
-  - |
-    echo "Running script in sequence..."
-    for i in {1..10}; do
-      echo "==== RUNNING SCRIPT PART $i ===="
-      cd android
-      echo "Waiting before executing script..."
-      sleep 15
-      timeout 7m bash start.sh 8 || echo "Script timed out but job continues"
-      cd ..
-    done
+for:
+  - matrix:
+      only:
+        - PART: 1
+    build_script:
+      - echo "=== Job 1 (PART 1) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 1 ended"
+
+  - matrix:
+      only:
+        - PART: 2
+    build_script:
+      - echo "=== Job 2 (PART 2) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 2 ended"
+
+  - matrix:
+      only:
+        - PART: 3
+    build_script:
+      - echo "=== Job 3 (PART 3) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 3 ended"
+
+  - matrix:
+      only:
+        - PART: 4
+    build_script:
+      - echo "=== Job 4 (PART 4) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 4 ended"
+
+  - matrix:
+      only:
+        - PART: 5
+    build_script:
+      - echo "=== Job 5 (PART 5) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 5 ended"
+
+  - matrix:
+      only:
+        - PART: 6
+    build_script:
+      - echo "=== Job 6 (PART 6) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 6 ended"
+
+  - matrix:
+      only:
+        - PART: 7
+    build_script:
+      - echo "=== Job 7 (PART 7) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 7 ended"
+
+  - matrix:
+      only:
+        - PART: 8
+    build_script:
+      - echo "=== Job 8 (PART 8) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 8 ended"
+
+  - matrix:
+      only:
+        - PART: 9
+    build_script:
+      - echo "=== Job 9 (PART 9) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 9 ended"
+
+  - matrix:
+      only:
+        - PART: 10
+    build_script:
+      - echo "=== Job 10 (PART 10) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 10 ended"
+
+  - matrix:
+      only:
+        - PART: 11
+    build_script:
+      - echo "=== Job 11 (PART 11) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 11 ended"
+
+  - matrix:
+      only:
+        - PART: 12
+    build_script:
+      - echo "=== Job 12 (PART 12) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 12 ended"
+
+  - matrix:
+      only:
+        - PART: 13
+    build_script:
+      - echo "=== Job 13 (PART 13) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 13 ended"
+
+  - matrix:
+      only:
+        - PART: 14
+    build_script:
+      - echo "=== Job 14 (PART 14) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 14 ended"
+
+  - matrix:
+      only:
+        - PART: 15
+    build_script:
+      - echo "=== Job 15 (PART 15) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 15 ended"
+
+  - matrix:
+      only:
+        - PART: 16
+    build_script:
+      - echo "=== Job 16 (PART 16) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 16 ended"
+
+  - matrix:
+      only:
+        - PART: 17
+    build_script:
+      - echo "=== Job 17 (PART 17) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 17 ended"
+
+  - matrix:
+      only:
+        - PART: 18
+    build_script:
+      - echo "=== Job 18 (PART 18) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 18 ended"
+
+  - matrix:
+      only:
+        - PART: 19
+    build_script:
+      - echo "=== Job 19 (PART 19) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 19 ended"
+
+  - matrix:
+      only:
+        - PART: 20
+    build_script:
+      - echo "=== Job 20 (PART 20) ==="
+      - sudo apt-get update
+      - sudo apt-get install -y git
+      - git clone https://github.com/Fiujol/android || true
+      - cd android
+      - timeout 58m bash start.sh 8 || echo "Job 20 ended"
+
