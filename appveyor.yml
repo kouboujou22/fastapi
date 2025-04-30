@@ -1,6 +1,7 @@
 version: 1.0.{build}
 image: Ubuntu2004
 build: off
+test: off
 
 for:
   - matrix:
