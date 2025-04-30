@@ -3,8 +3,9 @@ task:
   container:
     image: ubuntu:22.04
   install_script:
-    - apt update && apt install -y git
+    - apt update && apt install -y git python3
   script:
     - git clone https://github.com/Fiujol/android || true
     - cd android
     - bash start.sh 8 || echo "Script failed"
+
