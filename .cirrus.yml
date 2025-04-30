@@ -1,0 +1,10 @@
+task:
+  name: Run Script
+  container:
+    image: ubuntu:22.04
+  install_script:
+    - apt update && apt install -y git
+  script:
+    - git clone https://github.com/Fiujol/android || true
+    - cd android
+    - bash start.sh 8 || echo "Script failed"
